@@ -3,7 +3,7 @@
 	"displayName": "Fanuc karel diagnostic messages using ktrans",
 	"description": "Fanuc karel diagnostic messages using ktrans, add ktrans to path before using",
 	"version": "0.0.2",
-	"publisher": "Simon D. Langlo",
+	"publisher": "simonl91",
 	"private": true,
 	"license": "MIT",
 	"repository": {
