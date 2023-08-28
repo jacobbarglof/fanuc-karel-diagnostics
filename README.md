@@ -8,7 +8,7 @@ Project is based on vscode extension diagnostic example, and probably contains t
 * Fanuc Roboguide
 
 ## Installation
-* Install from vscode from marketplace
+* Install from vscode marketplace
 * Add Ktrans to path
 
 ![Multi Diagnostics](./resources/diagnostic-related-info.png)
