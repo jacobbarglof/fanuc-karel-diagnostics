@@ -1,10 +1,15 @@
 # README
+VSCode extension for providing diagnostic information for Fanuc Karel language.
+Extension compiles *.kl-files with ktrans and sends diagnostics to editor.
 
-Based on vscode extension diagnostic example.
-Add Ktrans to path
-Tries to compile with ktrans and give error message to editor.
+Project is based on vscode extension diagnostic example, and probably contains things that are not needed.
 
-Install the VSIX file from vscode extension menu
+# Requirements
+* Fanuc Roboguide
+
+# Installation
+* Add Ktrans to path
+* Install the VSIX file from vscode extension menu
 
 ![Multi Diagnostics](./resources/diagnostic-related-info.png)
 
