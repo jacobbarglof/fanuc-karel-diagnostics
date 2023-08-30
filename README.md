@@ -12,6 +12,7 @@ Project is based on vscode extension diagnostic example, and have probably not b
 * Add ktrans.exe to path <br/> 
 default location: "C:\Program Files (x86)\Fanuc\WinOLPC\bin"
 
+Shows the extension working together with Error Lens extension
 ![Multi Diagnostics](./resources/diagnostic-related-info.png)
 
 
