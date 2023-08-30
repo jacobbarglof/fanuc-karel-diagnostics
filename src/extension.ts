@@ -38,7 +38,7 @@ function updateDiagnostics(document: vscode.TextDocument, collection: vscode.Dia
 			ktrans = err.stdout.toString();
 		}
 
-		const pattern = /(\n\s*)(?<line>\d+)(\s+)(?<text>.*?)(\n)(.*?\n)(?<message>.*?)(\n)/gs;
+		const pattern = /(\n\s*)(?<line>\d+)(\s+)(?<text>.*?)(\n)(?<column>.*?\^)(.*?\n)(?<message>.*?)(\n)/gs;
 
 		if (ktrans == undefined) return;
 
@@ -50,15 +50,13 @@ function updateDiagnostics(document: vscode.TextDocument, collection: vscode.Dia
 			if (m != null) {
 				if (m.groups == undefined) return;
 				const lineNum = parseInt(m.groups.line);
+				const colNum = m.groups.column.length - 9;
 				diagnostics.push({
 					code: m.groups.text,
 					message: m.groups.message,
-					range: new vscode.Range(lineNum - 1, 0, lineNum - 1, 1),
+					range: new vscode.Range(lineNum - 1, colNum, lineNum - 1, colNum),
 					severity: vscode.DiagnosticSeverity.Error,
 					source: '',
-					relatedInformation: [
-						new vscode.DiagnosticRelatedInformation(new vscode.Location(document.uri, new vscode.Range(new vscode.Position(1, 8), new vscode.Position(1, 9))), 'first assignment to `x`')
-					]
 				});
 			}
 		}
