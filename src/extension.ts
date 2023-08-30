@@ -50,7 +50,7 @@ function updateDiagnostics(document: vscode.TextDocument, collection: vscode.Dia
 			if (m != null) {
 				if (m.groups == undefined) return;
 				const lineNum = parseInt(m.groups.line);
-				const colNum = m.groups.column.length - 9;
+				const colNum = m.groups.column.length - 5;
 				diagnostics.push({
 					code: m.groups.text,
 					message: m.groups.message,
