@@ -23,12 +23,15 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 function updateDiagnostics(document: vscode.TextDocument, collection: vscode.DiagnosticCollection): void {
-	if (path.extname(document.uri.path) == '.kl') {
+	const file = document.uri.path.toLowerCase();
+	if (file.endsWith('.kl')
+		&& !file.endsWith('.th.kl')
+		&& !file.endsWith('.h.kl')) {
 
 		let ktrans: string;
 		try {
 			ktrans = cp.execSync(
-				'ktrans ' + document.fileName + ' ' + path.join(os.tmpdir(), 'tullogtoys.pc')
+				'ktrans "' + document.fileName + '" "' + path.join(os.tmpdir(), 'tullogtoys.pc"')
 
 			).toString();
 		} catch (err: any) {
