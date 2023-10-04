@@ -1,17 +1,25 @@
 # README
-VSCode extension for providing diagnostic information for Fanuc Karel language. <br/>
-On-save the extension compiles *.kl-files with ktrans and sends diagnostics to editor.  <br/>
+This extension provides [diagnostic information](#example) for Fanuc Karel language in vscode. \
+On every save your .kl files are compiled with ktrans, compile errors are then sent to editor.
+
 
 ## Requirements
 * Fanuc Roboguide
 
-## Installation
-* Install from vscode marketplace
-* Add ktrans.exe to path <br/> 
-default location is "C:\Program Files (x86)\Fanuc\WinOLPC\bin" <br/>
 
+## Installation
+* Install extension from vscode marketplace
+* [Add ktrans to path](#add-to-path)
+
+
+### Example
 ![Multi Diagnostics](./resources/diagnostic-related-info.png)
 *The extension provides diagnostics when saving karel files <br/> (Inline error messages is "Error Lens" extension)*
 
+
+### Add to path
+
+![Add To Path](./resources/add-to-path.png)
+*Add to path step by step*
 
 
