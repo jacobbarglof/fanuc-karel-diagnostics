@@ -30,9 +30,10 @@ function updateDiagnostics(document: vscode.TextDocument, collection: vscode.Dia
 
 		let ktrans: string;
 		try {
+			const opts = vscode.workspace.getConfiguration('ktrans');
+			const args = opts.get('args');
 			ktrans = cp.execSync(
-				'ktrans "' + document.fileName + '" "' + path.join(os.tmpdir(), 'tullogtoys.pc"')
-
+				'ktrans ' + args + ' "' + document.fileName + '" "' + path.join(os.tmpdir(), 'tullogtoys.pc" ')
 			).toString();
 		} catch (err: any) {
 			ktrans = err.stdout.toString();

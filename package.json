@@ -2,7 +2,7 @@
 	"name": "fanuc-karel-diagnostics",
 	"displayName": "Fanuc karel diagnostic messages",
 	"description": "Fanuc karel diagnostic messages using ktrans, add ktrans to path before using",
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"publisher": "simonl91",
 	"homepage": "https://github.com/simonl91/fanuc-karel-diagnostics/blob/main/README.md",
 	"private": false,
@@ -32,7 +32,17 @@
 					".kl"
 				]
 			}
-		]
+		],
+		"configuration": {
+			"title": "Fanuc Karel Diagnostics",
+			"properties": {
+				"ktrans.args": {
+					"type": "string",
+					"default": "",
+					"description": "command line args to ktrans.\n Example: /config \"C:\\User\\Name\\Documents\\Robot1\\robot.ini\""
+				}
+			}
+		}
 	},
 	"main": "./out/extension.js",
 	"scripts": {
