@@ -11,6 +11,10 @@ On every save your .kl files are compiled with ktrans, compile errors are then s
 * Install extension from vscode marketplace
 * [Add ktrans to path](#add-to-path)
 
+## Settings
+* Set command line arguments to 'ktrans' \
+(KTrans command is run from the directory of the file you are editing)
+![Settings](./resources/settings.png)
 
 ### Example
 ![Multi Diagnostics](./resources/diagnostic-related-info.png)

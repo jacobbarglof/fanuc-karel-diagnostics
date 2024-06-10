@@ -39,7 +39,7 @@
 				"ktrans.args": {
 					"type": "string",
 					"default": "",
-					"description": "command line args to ktrans.\n Example: /config \"C:\\User\\Name\\Documents\\Robot1\\robot.ini\""
+					"description": "command line args to ktrans.\n Example: /config robot.ini"
 				}
 			}
 		}
