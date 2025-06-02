@@ -51,7 +51,7 @@ C:\Program Files (x86)\FANUC\ROBOGUIDE\bin\win32
 ```
 
 6. Click **OK** to save and apply changes.
-7. Restart Visual Studio Code.
+7. **Restart Visual Studio Code**.
 
 To confirm that `ktrans.exe` is now globally accessible:
 
